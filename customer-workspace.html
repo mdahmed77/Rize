@@ -117,7 +117,6 @@
         </button>
         My Props
       </h1>
-      <button class="btn btn-outline"><i class="fas fa-cog"></i></button>
     </div>
     <div class="split">
       <div class="sidebar">
@@ -137,12 +136,6 @@
         </div>
       </div>
       <div class="main-display noTabs">
-        <div class="filter-bar">
-          <div class="search">
-            <i class="far fa-search"></i>
-            <input type="text" />
-          </div>
-        </div>
         <div class="boxes">
           <div class="view-box workspace-scroll">
             <div class="customer-workspace">
@@ -321,10 +314,10 @@
         placeholder: "dump",
         revert: 100,
         scroll: true,
-        scrollSensitivity: 100
-        // receive: function( event, ui ) {
-        //   alert('asd');
-        // }
+        scrollSensitivity: 100,
+        receive: function( event, ui ) {
+          alert('asd');
+        }
       });
 
       $(".customer-workspace").disableSelection();
