@@ -72,6 +72,14 @@ p {
   padding: 7px 25px 8px;
   border-radius: 50px;
   white-space: nowrap;
+  &.bg-dark
+  {
+    background-color: #3f4b60;
+    &:hover
+    {
+      background-color: #272e3b;
+    }
+  }
   @media (max-width: 1199px) {
     font-size: 13px;
     padding: 6px 15px;
