@@ -122,6 +122,77 @@
             <option value="WaY">More Places</option>
           </select>
         </div>
+        <div class="fields-group">
+          <div class="form-group">
+            <select class="select-field">
+              <option value="no">Min Price</option>
+              <option value="$">$100k</option>
+              <option value="$">$200k</option>
+              <option value="$">$300k</option>
+              <option value="$">$400k</option>
+              <option value="$">$500k</option>
+              <option value="$">$600k</option>
+              <option value="$">$700k</option>
+              <option value="$">$800k</option>
+              <option value="$">$900k</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <select class="select-field">
+              <option value="no">Max Price</option>
+              <option value="$">$100k</option>
+              <option value="$">$200k</option>
+              <option value="$">$300k</option>
+              <option value="$">$400k</option>
+              <option value="$">$500k</option>
+              <option value="$">$600k</option>
+              <option value="$">$700k</option>
+              <option value="$">$800k</option>
+              <option value="$">$900k</option>
+            </select>
+          </div>
+          <span class="spacer">-</span>
+          <div class="form-group">
+            <select name="bedsx" id="bMina" class="select-field">
+              <option value="no">Min Bed</option>
+              <option value="1">Studio</option>
+              <option value="1">1</option>
+              <option value="1">2</option>
+              <option value="1">3</option>
+              <option value="1">4</option>
+              <option value="1">5</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <select name="bedsc" id="bMaxc" class="select-field">
+              <option value="no">Max Bed</option>
+              <option value="1">Studio</option>
+              <option value="1">1</option>
+              <option value="1">2</option>
+              <option value="1">3</option>
+              <option value="1">4</option>
+              <option value="1">5</option>
+            </select>
+          </div>
+          <span class="spacer">-</span>
+          <div class="form-group">
+            <select name="bedsc" id="pType" class="select-field">
+              <option value="no">Property Type</option>
+              <option value="">Any</option>
+              <option value="">Multi-Family</option>
+              <option value="">Single Family Home</option>
+              <option value="">Mobile Home</option>
+              <option value="">Condo</option>
+              <option value="">Townhouse</option>
+              <option value="">Manufactured Home</option>
+              <option value="">Vacant Land</option>
+              <option value="">Commercial</option>
+              <option value="">Co-op</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn btn-default ml-2">Save Searcch</button>
+
       </div>
       <div class="flex-wrapper">
         <div class="scrollable-container">
@@ -426,12 +497,14 @@
           <div class="listing">
             <div class="h-flex">
               <h2>Explore This Neighborhood</h2>
-              <button class="btn btn-default">Save Search</button>
+              <!-- <button class="btn btn-default">Save Searcch</button> -->
+              <button class="btn btn-outline ml-3" id="filterOpener">Filters</button>
+
             </div>
             <!-- Filter Bar Start -->
-            <div class="filters">
-              <div class="filter-header">
-                <div class="form-group">
+            <!-- <div class="filters"> -->
+              <!-- <div class="filter-header"> -->
+                <!-- <div class="form-group">
                   <select class="select-field">
                     <option value="no">No Min Price</option>
                     <option value="$">$100k</option>
@@ -459,15 +532,21 @@
                     <option value="$">$800k</option>
                     <option value="$">$900k</option>
                   </select>
-                </div>
-                <button class="btn btn-outline ml-3" id="filterOpener">Filters</button>
-              </div>
-            </div>
+                </div> -->
+              <!-- </div> -->
+            <!-- </div> -->
             <!-- Filter Bar END -->
 
             <div class="sort-controls">
               <p><b>21</b> of <b>8,120</b> Homes</p>
-              <button class="btn btn-drop">Sort by Recomended <i class="far fa-angle-down"></i>
+              <select name="sort" id="sortBy" class="select-field">
+                <option value="no" disabled selected>Sort By</option>
+                <option value="1">Price Hight To Low</option>
+                <option value="1">Price Low to High</option>
+                <option value="1">Latest</option>
+                <option value="1">Beds (Most)</option>
+                <option value="1">Baths (Most)</option>
+              </select>
             </div>
             <div class="prop-list">
               <div class="row no-gutters">
