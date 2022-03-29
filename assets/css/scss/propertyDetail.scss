@@ -499,6 +499,7 @@ h3 {
     width: 220px;
     text-align: center;
     display: inline-flex;
+    z-index: 12;
     > div {
       min-width: 100px;
       background-color: #000;
