@@ -392,6 +392,21 @@
   padding: 10px;
   display: flex;
   align-items: center;
+  input.form-control{
+    height: 36px;
+    border:1px solid #dadde0;
+    background: #fff;
+    height: 36px;
+    outline: none;
+    border-radius: 0px;
+    min-width: 130px;
+    font-size: 14px;
+    box-shadow: none !important;
+    &.pl-dollar
+    {
+      padding-left:30px;
+    }
+  }
   .input-group {
     margin-right: 10px;
     .input-group-prepend {
