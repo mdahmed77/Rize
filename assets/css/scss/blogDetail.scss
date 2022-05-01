@@ -1,0 +1,224 @@
+@import "var.scss";
+.pilltag {
+  color: #fff;
+  background-color: #c9cfd635;
+  display: inline-block;
+  padding: 3px 7px;
+  border-radius: 6px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: bold;
+  &.invert {
+    color: #404a56;
+    background-color: #a9b1bc35;
+    border-radius: 3px;
+    font-size: 11px;
+    padding: 2px 7px;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    font-family: regular;
+  }
+  i {
+    margin-right: 3px;
+  }
+}
+
+.blogPost {
+  padding: 60px 0;
+  @media (max-width: 1199px) {
+    padding: 30px 0;
+  }
+  h1 {
+    font-size: calc(2vw + 1em);
+    font-family: title;
+    margin: 0 0 20px;
+  }
+  .span {
+    font-size: 16px;
+    color: #676767;
+    display: flex;
+    align-items: center;
+    i {
+      margin-right: 5px;
+    }
+    .pipe {
+      position: relative;
+      top: 2px;
+      width: 1px;
+      height: 18px;
+      background-color: #00000075;
+      margin: 0 15px;
+    }
+  }
+  .d-flex {
+    @media (max-width: 1199px) {
+      flex-direction: column;
+      align-items: flex-start !important;
+      .author {
+        margin-top: 25px;
+      }
+    }
+  }
+  p {
+    font-size: 18px;
+    font-family: regular;
+    font-weight: 300;
+    color: #576779;
+    line-height: 30px;
+    margin: 15px 0;
+    & ~ p {
+      margin-top: 30px;
+    }
+  }
+}
+
+.blogImg {
+  min-height: 85vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin: 60px 0;
+  @media (max-width: 1199px) {
+    margin: 30px 0;
+  }
+}
+.shareSocial {
+  margin: 15px 0;
+  a {
+    font-size: 16px;
+    height: 40px;
+    width: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background-color: #eff2fc;
+    color: #3e4265;
+    text-decoration: none;
+    transition: 0.12s ease;
+    & ~ a
+    {
+      margin-left: 5px;
+    }
+    &:hover {
+      background-color: $dark;
+      color: #fff;
+    }
+  }
+}
+.card {
+  box-shadow: none;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 5px 10px rgb(0 0 0 / 5%);
+  & > div {
+    border: none;
+  }
+  .card-header {
+    overflow: hidden;
+    position: relative;
+    padding: 0px;
+    img {
+      transition: 0.12s linear;
+      transform: scale(1);
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+    }
+  }
+  &:hover {
+    .card-header {
+      img {
+        transform: scale(1.15);
+      }
+    }
+  }
+
+  .card-body {
+    span {
+      font-size: 10px;
+      text-transform: uppercase;
+      color: #898989;
+      font-family: regular;
+      letter-spacing: 1px;
+      display: inline-block;
+    }
+
+    text-align: left;
+    padding: 20px;
+
+    h5 {
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #eee;
+      a {
+        transition: 0.12s linear;
+        color: #333;
+        text-decoration: none;
+        font-family: title;
+        &:hover {
+          color: $dark;
+        }
+      }
+    }
+
+    .pname {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    p {
+      margin: 0px;
+      max-width: 100%;
+      font-family: regular;
+      color: #7b7b7b;
+      font-size: 14px;
+      line-height: 25px;
+      margin: 0 0 30px;
+    }
+  }
+}
+.blogPerson {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+  }
+  span {
+    color: #8493a9 !important;
+    font-family: title !important;
+    font-size: 13px !important;
+  }
+}
+.author {
+  display: flex;
+  align-items: center;
+  img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    margin-right: 15px;
+  }
+  h6 {
+    color: #8493a9;
+    margin: 0 0 5px;
+  }
+  span {
+    color: #000;
+    font-family: title !important;
+    font-size: 16px !important;
+  }
+}
+
+.related {
+  background-color: #eff2fc;
+  padding: 75px 0;
+}
