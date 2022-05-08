@@ -117,10 +117,10 @@
                 ><i class="far fa-search"></i
               ></span>
             </div>
-            <select class="select-field search" name="" multiple="multiple">
-              <option value="AL">Alabama</option>
+            <select class="select-field search" id="mls_data" name="" multiple="multiple">
+              <!-- <option value="AL">Alabama</option>
               <option value="WY">Wyoming</option>
-              <option value="WaY">More Places</option>
+              <option value="WaY">More Places</option> -->
             </select>
           </div>
           <div class="fields-group">
@@ -962,6 +962,18 @@
           $("#viewList").removeClass("d-none");
           $("#viewMap").addClass("d-none");
           $(".scrollable-container").addClass("d-none");
+        });
+        $('.searchBar .select2-search__field').keyup(function () {
+          $('.select2-dropdown').css('display', 'none');
+          var zvalue = $(this).val();
+          if (zvalue.length > 3) {
+            // alert(zvalue);
+            $('.select2-dropdown').css('display', 'block');
+            $('.select2-dropdown ul').append('<li class="select2-results__option select2-results__option--highlighted" id="select2-mls_data-result-ceto-AL" role="option" aria-selected="false" data-select2-id="select2-mls_data-result-ceto-AL">Alabama</li>');
+            // $('#mls_data').append('<option value="AL">Alabama</option>\n'+
+            //   '<option value="WY">Wyoming</option>\n'+
+            //   '<option value="WaY">More Places</option>');
+          }
         });
       });
     </script>

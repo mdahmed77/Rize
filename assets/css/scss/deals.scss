@@ -330,6 +330,7 @@
         padding: 8px 10px;
         font-size: 14px;
         font-family: regular;
+        vertical-align: middle;
         @media (max-width: 991px) {
           font-size: 11px;
         }
@@ -414,6 +415,11 @@
           }
         }
       }
+    }
+    .thumbnail
+    {
+      height: 75px;
+      width: 100px;
     }
   }
 }
