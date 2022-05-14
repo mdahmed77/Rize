@@ -108,20 +108,38 @@
       </div>
     </header>
 
+    <!-- Appender Code -->
+    <div class="appenderCapsule d-none">
+      <div class="capsule d-none">
+        <span class="capsuleX"><i class="fal fa-times"></i></span>
+        <div class="tagText"></div>
+      </div>
+    </div>
+
     <section class="explore">
       <div class="container-fluid p-0">
         <div class="searchBar">
-          <div class="input-group">
+          <div class="input-group capsuleSearch">
             <div class="input-group-prepend">
               <span class="input-group-text"
                 ><i class="far fa-search"></i
               ></span>
             </div>
-            <select class="select-field search" id="mls_data" name="" multiple="multiple">
-              <!-- <option value="AL">Alabama</option>
-              <option value="WY">Wyoming</option>
-              <option value="WaY">More Places</option> -->
-            </select>
+            <input type="text" />
+            <div class="results">
+              <p>123D W11 Ad Lincson Frik</p>
+              <p>Drim 13 ADs</p>
+              <p>Drr54 Azaq 123D</p>
+              <p>Hiuston W Cilicon Welly</p>
+              <p>Arizona Simks V11</p>
+              <p>Rofins Mallstown</p>
+              <p>123D W11 Ad Lincson Frik</p>
+              <p>Drim 13 ADs</p>
+              <p>Drr54 Azaq 123D</p>
+              <p>Hiuston W Cilicon Welly</p>
+              <p>Arizona Simks V11</p>
+              <p>Rofins Mallstown</p>
+            </div>
           </div>
           <div class="fields-group">
             <div class="input-group">
@@ -963,17 +981,34 @@
           $("#viewMap").addClass("d-none");
           $(".scrollable-container").addClass("d-none");
         });
-        $('.searchBar .select2-search__field').keyup(function () {
-          $('.select2-dropdown').css('display', 'none');
+        capsuleX();
+        function capsuleX() {
+          $(".capsuleX").each(function () {
+            $(this).on("click", function () {
+              $(this).parent().remove();
+            });
+          });
+        }
+        $(".capsuleSearch input").keyup(function () {
           var zvalue = $(this).val();
-          if (zvalue.length > 3) {
-            // alert(zvalue);
-            $('.select2-dropdown').css('display', 'block');
-            $('.select2-dropdown ul').append('<li class="select2-results__option select2-results__option--highlighted" id="select2-mls_data-result-ceto-AL" role="option" aria-selected="false" data-select2-id="select2-mls_data-result-ceto-AL">Alabama</li>');
-            // $('#mls_data').append('<option value="AL">Alabama</option>\n'+
-            //   '<option value="WY">Wyoming</option>\n'+
-            //   '<option value="WaY">More Places</option>');
+          if (zvalue.length > 2) {
+            $(".capsuleSearch .results").addClass("show-results");
+          } else {
+            $(".capsuleSearch .results").removeClass("show-results");
           }
+        });
+        $(".capsuleSearch .results p").each(function () {
+          $(this).on("click", function () {
+            var choosenOne = $(this).text();
+            var capsule = $(".appenderCapsule").html();
+            $(capsule).insertBefore(".capsuleSearch input");
+            $(".capsuleSearch .capsule").removeClass("d-none");
+            $(".capsuleSearch input")
+              .prev(".capsule")
+              .find(".tagText")
+              .text(choosenOne);
+            capsuleX();
+          });
         });
       });
     </script>
