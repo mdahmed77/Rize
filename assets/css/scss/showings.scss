@@ -1,0 +1,126 @@
+@import "var.scss";
+@import "fonts.scss";
+@import "reset.scss";
+
+.showings-cards {
+  padding: 15px 0;
+}
+.sh-card {
+  position: relative;
+  box-shadow: 0px 2px 3px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 7px;
+  overflow: hidden;
+  .sh-display {
+    position: relative;
+    padding-top: 60%;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  .sh-info {
+    padding: 15px;
+    h6 {
+      font-size: 17px;
+      font-family: title;
+      color: #000;
+      margin: 0;
+      line-height: 14px;
+    }
+    span {
+      color: #80878f;
+      font-size: 13px;
+    }
+    .date {
+      color: $dark;
+      font-size: 14px;
+      font-family: bold;
+      display: block;
+      margin: 0 0 15px;
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 0 15px;
+      li {
+        flex-grow: 1;
+        text-align: center;
+        padding: 5px;
+        background-color: #f1f3f5;
+        border-radius: 5px;
+        width: 100%;
+        max-width: calc(33% - 5px);
+        font-size: 14px;
+      }
+    }
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+      color: #80878f;
+      margin: 0 0 5px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 5px;
+      strong {
+        color: #000;
+      }
+    }
+    .links {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+      a {
+        flex-grow: 1;
+        text-align: center;
+        display: inline-block;
+        padding: 9px;
+        color: #fff;
+        text-decoration: none;
+        transition: 0.12s linear;
+        border-radius: 3px;
+        width: 50%;
+        max-width: calc(50% - 10px);
+        font-size: 12px;
+        text-transform: uppercase;
+        font-family: bold;
+        position: relative;
+        i
+        {
+            margin-right: 3px;
+        }
+        &:first-child {
+          background-color: $light;
+          &:hover {
+            background-color: $dark;
+            color: #fff;
+          }
+        }
+        &:last-child {
+          background-color: #33445d;
+          &:hover {
+            background-color: #000;
+            color: #fff;
+          }
+        }
+        & ~ a {
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: -10px;
+            height: 100%;
+            width: 1px;
+            background-color: #ededed;
+          }
+        }
+      }
+    }
+  }
+}
