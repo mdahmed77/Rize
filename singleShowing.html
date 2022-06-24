@@ -16,7 +16,7 @@
   <body>
 
     <div class="fixed-btns">
-      <button class="btn btn-notes"><i class="far fa-pencil"></i></button>
+      <button class="btn btn-notes" data-toggle="modal" data-target="#wnotes"><i class="far fa-pencil"></i></button>
       <button class="btn btn-camera"><i class="far fa-camera"></i></button>
       <button class="btn btn-toggle"><i class="far fa-plus"></i></button>
     </div>
@@ -85,6 +85,43 @@
         </div>
       </div>
     </div>
+
+<!-- The Modal -->
+<div class="modal" id="wnotes">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4>Make Notes</h4>
+        <button type="button" class="close" data-dismiss="modal"><i class="far fa-times"></i></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+       <div class="form-group">
+        <textarea class="form-control" rows="4"></textarea>
+       </div>
+       <button class="btn btn-theme">Save</button>
+       <div class="notes">
+        <h6>Saved Notes</h6>
+        <p>
+          Welcome home to your perfect desert retreat located in the
+          much-coveted central Palm Springs Sunrise Park neighborhood
+        </p>
+        <p>
+          Welcome home to your perfect desert retreat located in the
+          much-coveted central Palm Springs Sunrise Park neighborhood
+        </p>
+        <p>
+          Welcome home to your perfect desert retreat located in the
+          much-coveted central Palm Springs Sunrise Park neighborhood
+        </p>
+       </div>
+      </div>
+    </div>
+  </div>
+</div>
 
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/bootstrap.js"></script>

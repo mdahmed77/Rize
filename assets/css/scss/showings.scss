@@ -222,13 +222,12 @@
     color: #fff;
     font-size: 17px;
     border-radius: 50px;
-    transition: .07s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: 0.07s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     visibility: hidden;
-    top:47px;
+    top: 47px;
     opacity: 0;
     z-index: 1;
-    &.pop
-    {
+    &.pop {
       top: 0px;
       visibility: visible;
       opacity: 1;
@@ -240,25 +239,22 @@
     color: #fff;
     font-size: 17px;
     border-radius: 50px;
-    transition: .12s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: 0.12s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     visibility: hidden;
-    top:94px;
-    transition-delay: .02s;
+    top: 94px;
+    transition-delay: 0.02s;
     opacity: 0;
     z-index: 1;
-    &:hover
-    {
+    &:hover {
       background-color: rgb(0, 118, 59);
     }
-    &.pop
-    {
+    &.pop {
       top: 0px;
       opacity: 1;
       visibility: visible;
     }
   }
-  .btn
-  {
+  .btn {
     height: 40px;
     width: 40px;
     padding: 0;
@@ -269,10 +265,87 @@
   }
 }
 
-.description
-{
-  p
-  {
-    border:none !important;
+.description {
+  p {
+    border: none !important;
+  }
+}
+
+.modal-open {
+  padding-right: 0px !important;
+}
+
+.modal-backdrop {
+  backdrop-filter: blur(3px) !important;
+  background-color: #00000080 !important;
+}
+.modal-backdrop.show {
+  opacity: 1 !important;
+}
+.modal {
+  padding-right: 0px !important;
+  .modal-header {
+    background-color: #e7eaee;
+    padding: 7px 18px 4px;
+    h4 {
+      color: #000;
+      font-size: 20px;
+      font-family: title;
+      margin: 0;
+    }
+    .close {
+      background: none;
+      font-size: 18px;
+      margin: 0;
+      padding: 0;
+      opacity: 1;
+      text-shadow: none;
+      width: auto;
+      height: auto;
+      &:hover {
+        color: red !important;
+      }
+    }
+  }
+  .modal-body {
+    .form-group {
+      margin-bottom: 15px;
+      label {
+        font-size: 12px;
+        margin-top: 0px;
+        font-family: bold;
+      }
+      .form-control {
+        border: 1px solid #ccc;
+        border-radius: 0px;
+        font-size: 12px;
+      }
+    }
+    .btn-theme {
+      padding: 7px;
+      color: #fff;
+      transition: 0.12s linear;
+      border-radius: 3px;
+      font-size: 12px;
+      min-width: 100px;
+      text-transform: uppercase;
+      font-family: bold;
+      position: relative;
+      background-color: $dark;
+      &:hover {
+        background-color: #33445d;
+        color: #fff;
+      }
+    }
+    .notes {
+      margin-top: 10px;
+      p {
+        font-size: 13px;
+        color: #6b747d;
+        margin: 0 0 10px;
+        padding:10px 20px 10px 10px;
+        background-color: #f1f2f3;
+      }
+    }
   }
 }
