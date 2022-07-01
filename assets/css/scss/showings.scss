@@ -17,7 +17,9 @@
   .sh-display {
     position: relative;
     padding-top: 60%;
+    border-radius: 7px 7px 0 0 ;
     img {
+      border-radius: 7px 7px 0 0 ;
       position: absolute;
       top: 0;
       left: 0;
@@ -349,3 +351,129 @@
     }
   }
 }
+
+
+.showingTimeline
+{
+  position: relative;
+  padding-top: 45px;
+  .bar
+  {
+    height:calc(100% - 30px);
+    width:0px;
+    border-left:1px solid #5c697c29;
+    left: 50%;
+    top:0px;
+    position: absolute;
+    margin-top: 30px;
+    @media(max-width:730px)
+    {
+      left: 10px;
+    }
+    .date
+    {
+      position: absolute;
+      white-space: nowrap;
+      left: 0;
+      transform: translate(-50%, -100%);
+      top: 0px;
+      padding: 5px 10px;
+      background: #f1f3f4;
+      border-radius: 7px;
+      font-size: 14px;
+      font-family: 'bold';
+      @media(max-width:730px)
+      {
+        transform: translate(-10px, -100%);
+      }
+    }
+  }
+  .sh-card
+  {
+    max-width: 300px;
+    min-width: 300px;
+    margin-bottom: 20px;
+    overflow: visible;
+    .knot
+    {
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      background-color: $dark;
+      color:#fff;
+      font-size: 16px;
+      padding: 2px 0;
+      font-family: bold;
+      height: 28px;
+      width: 28px;
+      text-align: center;
+      border-radius: 20px;
+      box-shadow: 0px 0px 3px 0px rgba(0,0,0,.3);
+      .time
+      {
+        position:absolute;
+        color:$dark;
+        font-family: bold;
+        font-size: 14px;
+        white-space: nowrap;
+        top: 2px;
+        @media(max-width:730px)
+        {
+          display: none;
+        }
+      }
+    }
+    &.left
+    {
+      transform: translateX(calc(-50% - 30px));
+      @media(max-width:730px)
+      {
+        transform: translateX(calc(0% + 40px));
+      }
+      .knot
+      {
+        right: -44px;
+        @media(max-width:730px)
+        {
+          right: auto;  
+          left: -43px;
+        }
+        .time
+        {
+          transform: translateX(20px);
+        }
+      }
+    }
+    &.right
+    {
+      transform: translateX(calc(50% + 30px));
+      @media(max-width:730px)
+      {
+        transform: translateX(calc(0% + 40px));
+      }
+      .knot
+      {
+        left: -44px;
+        @media(max-width:730px)
+        {
+          right: auto;  
+          left: -43px;
+        }
+        .time
+        {
+          transform: translateX(calc(-100% - 30px));
+        }
+      }
+    }
+  }
+  > .d-flex
+  {
+    align-items: center;
+    flex-direction: column;
+    @media(max-width:730px)
+    {
+      align-items: flex-start;  
+    }
+  }
+}
+
