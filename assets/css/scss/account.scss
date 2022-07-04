@@ -1,0 +1,106 @@
+@import "var.scss";
+
+.account
+{
+  padding:50px 0;
+  background-color: #f6f7f9;
+}
+
+.panel
+{
+  background-color: #fff;
+  border:1px solid #ddd;
+  box-shadow: 0px 2px 3px rgba(0,0,0,0.2);
+  border-radius: 0px;
+  padding:0 20px 20px;
+  margin-bottom: 30px;
+  .panel-title
+  {
+    font-size: calc(.5vw + 1em);
+    padding:10px 0 5px;
+    border-bottom:1px solid #ddd;
+    margin-bottom: 20px;
+    font-family: bold;
+  }
+  .form-control
+  {
+    border-radius: 0px;
+  }
+}
+.agent {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  .img-holder {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+    border:1px solid #ddd;
+    @media (max-width: 767px) {
+      width: 60px;
+      height: 60px;
+      margin-right: 10px;
+    }
+  }
+  .text {
+    a {
+      text-decoration: none;
+      font-size: 20px;
+      color:$dark;
+      @media (max-width: 767px) {
+        font-size: 18px;
+      }
+      &:hover {
+        color: $dark;
+      }
+    }
+    p {
+      font-size: 15px;
+      color: #666f80;
+      @media (max-width: 767px) {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.linkCard
+{
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 15px 20px 15px;
+  min-height: 150px;
+  margin-bottom: 15px;
+  color:#000;
+  border-radius: 9px;
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2);
+  text-decoration: none;
+  transition: .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  &:hover
+  {
+    background-color: #002a4d;
+    color:#fff;
+    text-decoration:none;
+    img
+    {
+      opacity:.4;
+      transform: scale(1.2);
+      right: 20px;
+      filter: contrast(1.5);
+    }
+  }
+  img
+  {
+    height: 100px;
+    width: auto;
+    position: absolute;
+    left: auto;
+    right: 15px;
+    transition: .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: scale(1);
+  }
+}
