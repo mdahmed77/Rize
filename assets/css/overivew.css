@@ -1,0 +1,23 @@
+.overview
+{
+    padding: 50px 0;
+}
+.overview img
+{
+    max-width: 900px;
+    display: block;
+    margin:0 auto 50px;
+}
+.overview .btn-default
+{
+    padding: 12px 30px;
+    margin: 8px;
+}
+.overview .links
+{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
