@@ -1,0 +1,43 @@
+.iblock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.iblock h1
+{
+    font-size: calc(2vw + 1em);
+    color: #041E42;
+    margin: 0 0 50px;
+    text-align: center;
+}
+.iblock h2
+{
+    font-size: calc(1.5vw + .7em);
+    color: #041E42;
+    margin: 30px 0 0px;
+    text-align: center;
+}
+.iblock img
+{
+    display: block;
+    margin: 0 auto;
+    /* box-shadow: 0px 1px 3px rgba(0,0,0,0.3); */
+    width: 100%;
+    max-width: 85%;
+    height: auto;
+}
+.iblock img.noshadow
+{
+    box-shadow: none !important;
+}
+// .contain
+// {
+    // scroll-snap-type: y mandatory;
+    // scroll-snap-align: start;
+    // height: 100vh;  
+    // overflow: scroll;
+    /* display: flex;
+    flex-direction: column; */
+// }
