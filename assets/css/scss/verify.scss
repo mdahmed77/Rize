@@ -1,0 +1,35 @@
+@import "var.scss";
+
+.fWrap
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+.emailVerify
+{
+    padding: 30px 0 50px;
+    text-align: center;
+    img
+    {
+        max-height: 220px;
+        width: auto;
+        margin-bottom: 10px;
+    }
+    p
+    {
+        font-size: 16px;
+        font-family: regular;
+        a
+        {
+            color:rgb(0, 122, 198);
+            font-family: title;
+            &:hover
+            {
+                text-decoration: none;
+                color:rgb(0, 170, 255);
+            }
+        }
+    }
+}
