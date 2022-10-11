@@ -329,3 +329,342 @@
     border-radius: 7px;
   }
 }
+
+.btn-dark
+{
+  background-color: #232323;
+  color:#fff;
+  font-size:10px !important;
+  border-radius: 50px;
+  padding: 7px 15px 6px !important;
+  text-transform: uppercase;
+  font-family: bold;
+  letter-spacing: 1px;
+  border:none;
+  &:hover
+  {
+    background-color: $dark;
+  }
+}
+
+
+
+.modal-open {
+  padding-right: 0px !important;
+}
+
+.modal-backdrop {
+  backdrop-filter: blur(3px) !important;
+  background-color: #00000080 !important;
+}
+.modal-backdrop.show {
+  opacity: 1 !important;
+}
+.modal {
+  padding-right: 0px !important;
+  .modal-header {
+    background-color: #e7eaee;
+    padding: 7px 12px 4px;
+    align-items: center;
+    h4 {
+      color: #000;
+      font-size: 20px;
+      font-family: title;
+      margin: 0;
+    }
+    .close {
+      background: none;
+      font-size: 18px;
+      margin: 0;
+      padding: 0;
+      opacity: 1;
+      text-shadow: none;
+      width: auto;
+      height: auto;
+      &:hover {
+        color: red !important;
+      }
+    }
+  }
+  .modal-body {
+    .form-group {
+      margin-bottom: 15px;
+      label {
+        font-size: 13px;
+        margin-top: 0px;
+        font-family: bold;
+      }
+      .form-control {
+        border: 1px solid #ccc;
+        border-radius: 0px;
+        font-size: 13px;
+      }
+    }
+    .btn-theme {
+      padding: 7px;
+      color: #fff;
+      transition: 0.12s linear;
+      border-radius: 3px;
+      font-size: 13px;
+      min-width: 100px;
+      text-transform: uppercase;
+      font-family: bold;
+      position: relative;
+      background-color: $dark;
+      &:hover {
+        background-color: #33445d;
+        color: #fff;
+      }
+    }
+
+    select
+    {
+      min-height: 35px;
+      font-size: 14px !important;
+    }
+
+    .search {
+      display: inline-flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      max-width: 600px;
+      width: 100%;
+      padding: 0;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 0px;
+      position: relative;
+      &.light-text {
+        background-color: #000;
+        border: 1px solid #333;
+        input {
+          color: #fff;
+        }
+      }
+      input {
+        border: none;
+        background-color: transparent;
+        padding: 0px;
+        width: 100% !important;
+        flex-grow: 1 !important;
+        outline: none;
+        font-size: 14px;
+        min-width: 275px;
+        padding: 1px 12px 0px;
+      }
+      .btn {
+        font-size: 14px;
+        padding: 0px;
+        border-radius: 0px;
+        min-width: 10px;
+        color: #fff !important;
+        background-color: $dark;
+        padding: 6px;
+        min-width: 35px;
+        i {
+          position: relative;
+          right: -1px;
+        }
+      }
+    }
+    .propSingle.selectedProp {
+      display: flex;
+      align-items: center;
+      padding: 0px;
+      transition: 0.1s linear;
+      background-color: transparent;
+      border-radius: 5px;
+      img {
+        margin-right: 10px;
+        height: 85px;
+        width: 85px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 5px;
+      }
+      .fa-user-circle {
+        font-size: 32px;
+        margin-right: 10px;
+        & ~ .propInf {
+          p {
+            margin-bottom: 0px;
+          }
+        }
+      }
+      .propInf {
+        h6 {
+          font-family: bold;
+          margin: 0px;
+          font-size: 17px;
+          position: relative;
+          top: -2px;
+        }
+        p {
+          font-size: 13px;
+          margin: 0px 0 5px;
+          font-family: regular;
+          opacity: 0.7;
+        }
+        .status {
+          font-family: regular;
+          letter-spacing: 0.5px;
+          font-size: 10px;
+          text-transform: uppercase;
+          color: #fff;
+          padding: 3px 5px;
+          border-radius: 3px;
+          &.closed {
+            background-color: red;
+          }
+          &.active {
+            background-color: #00894d;
+          }
+          &.pending {
+            background-color: #0086dd;
+          }
+        }
+      }
+      .btn-prime {
+        margin-left: auto;
+        font-size: 13px;
+        min-width: 70px;
+      }
+    }
+  }
+}
+
+.propResults {
+  position: absolute;
+  top: calc(100% + 15px);
+  left: 0px;
+  width: 100%;
+  z-index: 100;
+  background-color: #ffffffc7;
+  backdrop-filter: blur(10px);
+  border-radius: 6px;
+  padding: 5px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+  height: auto;
+  max-height: 325px;
+  overflow: hidden;
+  overflow-y: scroll;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.1s ease;
+  &.agentResults {
+    max-height: 300px;
+  }
+  &.searching {
+    visibility: visible;
+    opacity: 1;
+    top: calc(100% + 5px) !important;
+  }
+  &::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+    position: absolute;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $dark;
+    border-radius: 0px;
+    transition: 0.2s linear;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  .sticky-top {
+    position: sticky;
+    top: 3px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 3px;
+  }
+  .close {
+    border: none;
+    background: transparent;
+    color: red;
+    padding: 0px;
+    font-size: 9px;
+    font-family: "bold";
+    z-index: 1;
+    outline: none;
+  }
+  .propSingle {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: 0.1s linear;
+    background-color: transparent;
+    border-radius: 5px;
+    &:hover {
+      background-color: #fff;
+    }
+    img {
+      margin-right: 10px;
+      height: 85px;
+      width: 85px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 5px;
+    }
+    .fa-user-circle {
+      font-size: 32px;
+      margin-right: 10px;
+      & ~ .propInf {
+        p {
+          margin-bottom: 0px;
+        }
+      }
+    }
+    .propInf {
+      h6 {
+        font-family: bold;
+        margin: 0px;
+        font-size: 17px;
+        position: relative;
+        top: -2px;
+      }
+      p {
+        font-size: 13px;
+        margin: 0px 0 5px;
+        font-family: regular;
+        opacity: 0.7;
+      }
+      .status {
+        font-family: regular;
+        letter-spacing: 0.5px;
+        font-size: 10px;
+        text-transform: uppercase;
+        color: #fff;
+        padding: 3px 5px;
+        border-radius: 3px;
+        &.closed {
+          background-color: red;
+        }
+        &.active {
+          background-color: #00894d;
+        }
+        &.pending {
+          background-color: #0086dd;
+        }
+      }
+    }
+    .btn-prime {
+      margin-left: auto;
+      font-size: 13px;
+      min-width: 70px;
+    }
+  }
+}
+
+@media (min-width: 576px)
+{
+  .modal-dialog {
+      max-width: 800px;
+  }
+}
