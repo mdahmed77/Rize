@@ -18,7 +18,7 @@
     <div class="mobile-menu">
       <div class="brand">
         <button class="btn close-btn"><i class="far fa-times"></i></button>
-        <img src="assets/images/logo.png" alt="">
+        <img src="assets/images/logo.png" alt="" />
       </div>
       <a href="#">Buy</a>
       <a href="#">Rent</a>
@@ -110,44 +110,160 @@
     <div class="ar-signer">
       <div class="container-fluid p-0">
         <div class="row no-gutters">
-          <div class="col-lg-6 col-12">
+          <div class="col-xl-6 col-12">
             <div class="media-box register-bg">
               <h1>Here Your Life <span>Changes</span></h1>
             </div>
           </div>
-          <div class="col-lg-6 col-12">
+          <div class="col-xl-6 col-12">
             <div class="form-box">
               <h2>Register</h2>
-              <div class="form-holder">
-                <form>
-                    <div class="form-group">
-                      <label>Email</label>
-                      <input class="form-control" type="email">
-                    </div>
-                    <div class="form-group">
-                      <label>Password</label>
-                      <input class="form-control" type="password">
-                    </div>
-                    <div class="form-group">
-                      <label>Confirm Password</label>
-                      <input class="form-control" type="password">
-                    </div>
-                    <div class="remember">
-                      <div class="custom-control custom-checkbox custom-control-inline">
-                        <input type="checkbox" class="custom-control-input" id="accept" checked="">
-                        <label class="custom-control-label" for="accept">I accept the conditions</label>
+              <div class="form-holder registerForm">
+                <form method="POST" action="https://allrize.com/register">
+                  <input
+                    type="hidden"
+                    name="_token"
+                    value="RiXDGV2v56NRMiEztIFfnbFVCbu3D9CbrKOAasv3"
+                  />
+                  <div class="row">
+                    <div class="col-lg-6 col-12">
+                      <div class="form-group">
+                        <label for="FullName">First Name</label>
+                        <input
+                          type="text"
+                          name="first_name"
+                          class="form-control"
+                          required=""
+                          value=""
+                        />
                       </div>
                     </div>
-          
-                    <a href="#" class="btn btn-default">Sign Up</a>
-          
-                    <div class="or"></div>
-          
-                    <a href="#" class="btn btn-fb"><i class="fab fa-facebook-f" aria-hidden="true"></i>Login with Facebook</a>
-          
-                    <a href="#" class="btn btn-twitter"><i class="fab fa-twitter" aria-hidden="true"></i>Login with Twitter</a>
-                    <p>Already have an account?<a href="login.html"><i class="fal fa-sign-in"></i> Sign in</a></p>
-                  </form>
+                    <div class="col-lg-6 col-12">
+                      <div class="form-group">
+                        <label for="FullName">Last Name</label>
+                        <input
+                          type="text"
+                          name="last_name"
+                          class="form-control"
+                          required=""
+                          value=""
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                      <div class="form-group">
+                        <label for="FullName">Phone Number</label>
+                        <input
+                          type="text"
+                          name="phone_number"
+                          class="form-control"
+                          required=""
+                          value=""
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                      <div class="form-group">
+                        <label>Email</label>
+                        <input
+                          class="form-control"
+                          type="email"
+                          name="email"
+                          required=""
+                          value=""
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                      <div class="form-group">
+                        <label>Password</label>
+                        <input
+                          class="form-control"
+                          type="password"
+                          name="password"
+                          required=""
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                      <div class="form-group">
+                        <label>Confirm Password</label>
+                        <input
+                          class="form-control"
+                          type="password"
+                          name="password_confirmation"
+                          required=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div
+                      data-sitekey="6LfILU4iAAAAAFiWOGcxD7-Odo-0KDHAbAW1R9hp"
+                      class="g-recaptcha"
+                    >
+                      <div style="width: 304px; height: 78px">
+                        <div>
+                          <iframe
+                            title="reCAPTCHA"
+                            src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfILU4iAAAAAFiWOGcxD7-Odo-0KDHAbAW1R9hp&amp;co=aHR0cHM6Ly9hbGxyaXplLmNvbTo0NDM.&amp;hl=en-GB&amp;v=vP4jQKq0YJFzU6e21-BGy3GP&amp;size=normal&amp;cb=80qkj2lho9eo"
+                            width="304"
+                            height="78"
+                            role="presentation"
+                            name="a-48gykuciy5db"
+                            frameborder="0"
+                            scrolling="no"
+                            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
+                          ></iframe>
+                        </div>
+                        <textarea
+                          id="g-recaptcha-response"
+                          name="g-recaptcha-response"
+                          class="g-recaptcha-response"
+                          style="
+                            width: 250px;
+                            height: 40px;
+                            border: 1px solid rgb(193, 193, 193);
+                            margin: 10px 25px;
+                            padding: 0px;
+                            resize: none;
+                            display: none;
+                          "
+                        ></textarea>
+                      </div>
+                      <iframe style="display: none"></iframe>
+                    </div>
+                  </div>
+                  <div class="remember">
+                    <div
+                      class="custom-control custom-checkbox custom-control-inline"
+                    >
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="accept"
+                        checked=""
+                      />
+                      <label class="custom-control-label" for="accept"
+                        >I accept the conditions</label
+                      >
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="submit"
+                      class="btn btn-default"
+                      value="Sign Up"
+                    />
+                  </div>
+
+                  <p>
+                    Already have an account?<a
+                      href="https://allrize.com/login-user"
+                      ><i class="fal fa-sign-in"></i> Sign in</a
+                    >
+                  </p>
+                </form>
               </div>
             </div>
           </div>
