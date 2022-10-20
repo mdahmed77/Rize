@@ -72,11 +72,9 @@ p {
   padding: 7px 25px 8px;
   border-radius: 50px;
   white-space: nowrap;
-  &.bg-dark
-  {
+  &.bg-dark {
     background-color: #3f4b60;
-    &:hover
-    {
+    &:hover {
       background-color: #272e3b;
     }
   }
@@ -179,14 +177,13 @@ p {
       margin-bottom: 15px !important;
     }
   }
-  .btn
-  {
+  .btn {
     @media (max-width: 1199px) {
       font-size: 11px;
       padding: 6px 14px;
     }
   }
-  
+
   // a {
   //   text-decoration: underline;
   //   color: $light;
@@ -314,7 +311,7 @@ p {
     border-radius: 0px;
     margin-bottom: 10px;
     transition: 0.15s ease;
-    @media (max-width:767px) {
+    @media (max-width: 767px) {
       padding: 8px 15px;
       font-size: 13px;
     }
@@ -331,4 +328,10 @@ p {
 
 .justify-content-evenly {
   justify-content: space-evenly !important;
+}
+
+.g_id_signin {
+  position: absolute;
+  top: 55px;
+  right: 15px;
 }
