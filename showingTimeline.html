@@ -46,6 +46,7 @@
               <p>HDA Fees <strong class="dark-text">$1170.00</strong></p>
               <div class="links">
                 <a href="#" class="btn btn-prime dark-text">View More</a>
+                <a href="#share" class="btn btn-share" data-toggle="modal"><i class="fal fa-share-alt"></i> Share</a>
               </div>
             </div>
           </div>
@@ -81,12 +82,94 @@
       </div>
     </div>
 
+    <!-- The Modal -->
+    <div class="modal modal-md" id="share">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4>Share Timeline with Friends</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              <i class="far fa-times"></i>
+            </button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form action="" class="form">
+              <div class="row">
+                <div class="col-12">
+                  <div class="form-group">
+                    <label for="" class="d-flex justify-content-between"
+                      >Search
+                      <span class="text-success d-none reSearch"
+                        >Search Again <i class="fa fa-redo"></i></span
+                    ></label>
+                    <div class="search dark-text">
+                      <button type="button" class="btn btn-prime dark-text">
+                        <i class="far fa-search"></i>
+                      </button>
+                      <input type="text" placeholder="Search Persons" />
+                      <div class="personResults dark-text">
+                        <div class="loader"></div>
+                        <a class="dark-text personSingle">
+                          <img src="assets/images/avatar.jpg" alt="" />
+                          <div class="personInf">
+                            <h6>Windal Sobroi</h6>
+                            <p>Super Agent</p>
+                          </div>
+                        </a>
+                        <a class="dark-text personSingle">
+                          <img src="assets/images/person.png" alt="" />
+                          <div class="personInf">
+                            <h6>Devins Blake</h6>
+                            <p>Agent</p>
+                          </div>
+                        </a>
+                        <a class="dark-text personSingle">
+                          <img src="assets/images/avatar.jpg" alt="" />
+                          <div class="personInf">
+                            <h6>$12,234,300</h6>
+                            <p>Warnor Street, 45 Alberts Town, London</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <button class="btn btn-theme">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/bootstrap.js"></script>
     <script src="assets/js/showings.js"></script>
     <script>
       $(document).ready(function(){
-        
+        $(".search input").on("input", function () {
+          if (!$(this).val()) {
+            $(this).next(".personResults").removeClass("searching");
+          } else {
+            $(this).next(".personResults").addClass("searching");
+          }
+        });
+        $(".search .personResults .personSingle").each(function () {
+          $(this).on("click", function () {
+            $(this).addClass("selectedPerson");
+            $(this).parent().parent().parent().append(this);
+            $(".search").addClass("d-none");
+            $(".reSearch").removeClass("d-none");
+          });
+        });
+        $(".reSearch").on("click", function () {
+          $(".selectedPerson").removeClass("selectedPerson").remove();
+          $(".search").removeClass("d-none");
+          $(".reSearch").addClass("d-none");
+        });
       });
     </script>
   </body>
